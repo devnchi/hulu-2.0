@@ -8,12 +8,13 @@ import {
 } from '@heroicons/react/outline';
 import Image from 'next/image';
 import AppNavItem from './AppNavItem';
+import Link from 'next/link';
 
 function AppNav() {
   return (
     <header className='flex flex-col sm:flex-row m-5 justify-between items-center h-auto'>
       <div className='flex flex-grow justify-evenly max-w-2xl'>
-        <a href='/'><AppNavItem title='HOME' Icon={HomeIcon} /></a>
+        <Link passHref='/'><AppNavItem title='HOME' Icon={HomeIcon} /></Link>
         <AppNavItem title='TRENDING' Icon={LightningBoltIcon} />
         <AppNavItem title='VERIFIED' Icon={BadgeCheckIcon} />
         <AppNavItem title='COLLECTIONS' Icon={CollectionIcon} />
@@ -24,7 +25,8 @@ function AppNav() {
       className='object-contain'
       src='https://links.papareact.com/ua6'
       width={200}
-      height={100} 
+      height={100}
+      alt='hulu logo' 
       />
 
     </header>
